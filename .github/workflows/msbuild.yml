@@ -31,7 +31,7 @@ jobs:
 
     - name: dir
       run: |
-        cmd.exe /c dir ${{github.workspace}}\pthread-win32
+        cmd.exe /c dir /s
 
 
     - name: package and upload
@@ -43,6 +43,7 @@ jobs:
             COPYING
             AUTHORS
             README
+
 
 
 
