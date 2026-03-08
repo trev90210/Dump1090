@@ -29,3 +29,14 @@ jobs:
 #         py.exe -3 tools\SBS_client.py --host localhost --wait 10 --port 30001 raw-out
 #
 
+
+    - name: package and upload
+      uses: actions/upload-artifact@v4
+      with:
+        name: dump1090_${{matrix.BUILD_CONFIGURATION}}_${{matrix.BUILD_PLATFORM}}
+        path: |
+            dump1090.exe
+            COPYING
+            AUTHORS
+            README
+
