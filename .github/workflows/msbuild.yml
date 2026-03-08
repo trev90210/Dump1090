@@ -1,6 +1,6 @@
 name: MSBuild
 
-on: [push]
+on: [push, workflow_dispatch]
 
 env:
   SOLUTION_FILE_PATH: src/Dump1090.sln
@@ -28,3 +28,4 @@ jobs:
 #    run: start dump1090.exe --config dump1090-ci.cfg --debug Gn --net --logfile dump1090-ci.log
 #         py.exe -3 tools\SBS_client.py --host localhost --wait 10 --port 30001 raw-out
 #
+
