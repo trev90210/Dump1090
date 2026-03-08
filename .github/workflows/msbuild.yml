@@ -29,6 +29,10 @@ jobs:
     #         py.exe -3 tools\SBS_client.py --host localhost --wait 10 --port 30001 raw-out
     #
 
+    - name: dir
+      run: |
+        cmd.exe /c dir ${{github.workspace}}\pthread-win32
+
 
     - name: package and upload
       uses: actions/upload-artifact@v4
@@ -39,5 +43,6 @@ jobs:
             COPYING
             AUTHORS
             README
+
 
 
