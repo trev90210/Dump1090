@@ -24,3 +24,17 @@ jobs:
 
       - name: Build
         run: cmake --build build --config Release
+
+
+      - name: package and upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: dump1090_${{matrix.BUILD_CONFIGURATION}}_${{matrix.BUILD_PLATFORM}}
+          compression-level: 9
+          path: |
+            .
+            !src
+            #!testfiles
+            #!*.csv
+            #!*.sqlite
+
