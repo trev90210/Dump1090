@@ -29,7 +29,7 @@ jobs:
       - name: package and upload
         uses: actions/upload-artifact@v4
         with:
-          name: dump1090_${{matrix.BUILD_CONFIGURATION}}_${{matrix.BUILD_PLATFORM}}
+          name: dump1090_cmake
           compression-level: 9
           path: |
             .
