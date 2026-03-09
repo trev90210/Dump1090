@@ -42,8 +42,9 @@ jobs:
         path: |
             .
             !src
-            !testfiled
-            !*.csv
+            !testfiles
+            #!*.csv
+            #!*.sqlite
 
 
 
