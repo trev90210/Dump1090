@@ -38,11 +38,13 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: dump1090_${{matrix.BUILD_CONFIGURATION}}_${{matrix.BUILD_PLATFORM}}
+        compression-level: 9
         path: |
-            dump1090.exe
-            COPYING
-            AUTHORS
-            README
+            .
+            !src
+            !testfiled
+            !*.csv
+
 
 
 
