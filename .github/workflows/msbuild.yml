@@ -23,12 +23,6 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: msbuild /m /p:Configuration=${{matrix.BUILD_CONFIGURATION}} /p:Platform=${{matrix.BUILD_PLATFORM}} /p:PlatformToolset=v143 ${{env.SOLUTION_FILE_PATH}}
 
-    # test:
-    #   steps:
-    #    run: start dump1090.exe --config dump1090-ci.cfg --debug Gn --net --logfile dump1090-ci.log
-    #         py.exe -3 tools\SBS_client.py --host localhost --wait 10 --port 30001 raw-out
-    #
-
     - name: dir
       run: |
         cmd.exe /c dir /s
@@ -46,6 +40,12 @@ jobs:
             #!*.csv
             #!*.sqlite
 
+  test:
+    steps:
+      - name: test
+        run: start dump1090.exe --config dump1090-ci.cfg --debug Gn --net --logfile dump1090-ci.log
+        #  py.exe -3 tools\SBS_client.py --host localhost --wait 10 --port 30001 raw-out
+  
 
 
 
