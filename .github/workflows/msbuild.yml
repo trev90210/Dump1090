@@ -43,7 +43,7 @@ jobs:
     # test:
     # steps:
     - name: test
-      run: cmd.exe /c dump1090.exe --config ".github\dump1090.cfg" --debug GNE --net --infile "testfiles\modes1.bin"
+      run: cmd.exe /c dump1090.exe --config ".github\dump1090.cfg" --debug GNE --net --infile "testfiles\modes1.bin" --test *
       #  py.exe -3 tools\SBS_client.py --host localhost --wait 10 --port 30001 raw-out
   
 
