@@ -48,7 +48,7 @@ jobs:
           cmd.exe /c echo "************************"
           cmd.exe /c dump1090.exe --config ".github\dump1090.cfg" --debug GNE --net --infile "testfiles\modes1.bin"
           cmd.exe /c echo "************************"
-          cmd.exe /c start py.exe -3 tools\SBS_client.py --host localhost --wait 10 --port 30001 raw-out
+          cmd.exe /c start py.exe -3 tools\SBS_client.py --host localhost --wait 0 --port 30001 raw-out
           cmd.exe /c dump1090.exe --config ".github\dump1090.cfg" --debug GNE --net-only --infile "testfiles\modes1.bin"
   
 
